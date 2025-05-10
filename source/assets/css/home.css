@@ -1,0 +1,214 @@
+header {
+    position: fixed; /* Fix header to the top */
+    top: 0; /* Stick it to the top */
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.1);
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+header .logo {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a{
+    height: 100%;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+    font-size: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    transition: all ease 0.3s;
+}
+
+nav a:hover {
+    background-color: #091f40;
+    color:white;
+}
+
+header .option {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 10px;
+}
+
+.option a{
+    height: 40px;
+    width: 40px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all ease 0.3s;
+}
+
+.option a:hover{
+    background-color: #091f40;
+    color: white;
+}
+
+
+/* HERO SECTION */
+
+main {
+    margin-top: 70px;
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0px 30px; /* Same padding as header */
+    overflow: hidden;
+}
+
+main video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the area properly */
+}
+
+/* Optional: Dark Overlay for better visibility */
+main::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Optional: Add Text Over Video */
+.main-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CATEGORY SECTION */
+#category {
+    padding: 0px 30px;
+    text-align: center;
+}
+
+#category h2 {
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+
+/* CATEGORY SLIDER CONTAINER */
+.category-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SLIDER */
+.category-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+    width: 90%;
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar */
+.category-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* CATEGORY BOX */
+.category-box {
+    position: relative;
+    min-width: 250px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    scroll-snap-align: center;
+}
+
+.category-box:hover {
+    transform: scale(1.01);
+}
+
+.category-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+    border-radius: 10px;
+}
+
+.category-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.category-box:hover .category-name {
+    opacity: 1;
+}
+
+/* SLIDER BUTTONS */
+button {
+    position: absolute;
+    background-color: #091f40;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #06224a;
+}
+
+/* Positioning buttons */
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
