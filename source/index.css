@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* HERO SECTION */
+
+main {
+    margin-top: 70px;
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0px 30px;
+    overflow: hidden;
+}
+
+main video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the area properly */
+}
+
+/* Optional: Dark Overlay for better visibility */
+main::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Optional: Add Text Over Video */
+.main-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CATEGORY SECTION */
+#categories {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+#categories h2 {
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+
+/* CATEGORY SLIDER CONTAINER */
+.category-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SLIDER */
+.category-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+    width: 95%;
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar */
+.category-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* CATEGORY BOX */
+.category-box {
+    position: relative;
+    min-width: 250px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    scroll-snap-align: center;
+}
+
+.category-box:hover {
+    transform: scale(1.01);
+}
+
+.category-box img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 10px;
+}
+
+.category-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.category-box:hover .category-name {
+    opacity: 1;
+}
+
+/* SLIDER BUTTONS */
+button {
+    position: absolute;
+    color: #091f40;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #06224a;
+    color:white;
+}
+
+
+#nextBtn {
+    right: 50px;
+}
+
+
+section#products {
+    background-color: #efe6e1;
+    height: 100vh;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #0B1F41;
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.footer-column ul li a:hover {
+    opacity: 1;
+}
+
+*{
+}
+
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff7b00;
+}
+
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
